@@ -6,12 +6,12 @@ if set(dna).issubset({"A", "T", "G", "C"}):
     print("Valid DNA sequence")
 
     print("Length of the given Sequence", len(dna))
-
+    #count function
     print("A:", dna.count("A"))
     print("T:", dna.count("T"))
     print("G:", dna.count("G"))
     print("C:", dna.count("C"))
-
+   #gc content calculation
     gc = dna.count("G") + dna.count("C")
     gccontent = (gc / len(dna)) * 100
 
@@ -33,6 +33,26 @@ if set(dna).issubset({"A", "T", "G", "C"}):
             comp += "G"
 
     print("Complement:", comp)
+     
+    #dictionary
+    count={
+        "A":dna.count("A"),
+        "T":dna.count("T"),
+        "G":dna.count("G"),
+        "C":dna.count("C")
+        
+    }
+    print(count)
+    
+    #loop
+    for key, value in count.items():
+        print(key, "=", value)
+        
+        #sets
+        bases={"A","T","G","C"}
+        print(bases)
+        print(set(dna))
+
 
 else:
     print("Invalid DNA sequence")
