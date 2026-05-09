@@ -52,7 +52,27 @@ if set(dna).issubset({"A", "T", "G", "C"}):
         bases={"A","T","G","C"}
         print(bases)
         print(set(dna))
+    
+    #loops
+    count=0
+    cnt=0
+    for base in dna:
+        if base=="A" or base=="G":
+            count+=1
+    print("Purine count=",count)
+    for base in dna:
+        if base=="T" or base=="C":
+            cnt+=1
+    print("Pyrimidine count=",cnt)
+    
+    rev=""
+    for base in dna:
+        rev=base+rev
+    print("Reversed DNA Sequence=",rev)
 
 
 else:
     print("Invalid DNA sequence")
+    for base in dna:
+        if base not in {"A","T","G","C"}:
+            print("Invalid base found:", base)
