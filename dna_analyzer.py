@@ -28,7 +28,7 @@ def pyrimidine(dna):
 def invalid_base(dna):
             for base in dna:
                 if base not in {"A","T","G","C"}:
-                    return f"Invalid base:{base}"
+                    return f"Invalid base: {base}"
 
 #complementary dna
 def complement(dna):
@@ -42,7 +42,7 @@ def complement(dna):
             comp += "C"
         elif base == "C":
             comp += "G"
-    return f"Complement:{comp}"
+    return f"Complement:  {comp}"
                     
 #dna validation
 def dna_validate(dna):
